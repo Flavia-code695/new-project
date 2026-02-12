@@ -1,171 +1,557 @@
-/* CSS bazik për faqe pizzeria */
-/* Body dhe navbar */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff8f0;
-  color: #333;
+/* style.css */
+
+/* Reset i bazës */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body */
+body {
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
 nav {
-  background-color: #d63447;
-  padding: 15px;
+  background-color: #ff4d4d;
+  padding: 15px 0;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  list-style: none;
+  gap: 25px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  background-color: white;
+  color: #ff4d4d;
+  border-radius: 5px;
 }
 
+/* Header */
 header {
   text-align: center;
-  padding: 30px 15px;
-  background-color: #fff3e6;
+  padding: 40px 20px;
+  background: url("pizza-header.jpg") center/cover no-repeat;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 header h1 {
-  color: #d63447;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+}
+
+/* Menu Section */
+.menu-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 /* Filter buttons */
 .filter-buttons {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .filter-buttons button {
-  background-color: #d63447;
+  background-color: #ff4d4d;
   color: white;
   border: none;
-  padding: 10px 15px;
-  margin: 0 5px;
+  padding: 10px 20px;
+  margin: 0 8px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .filter-buttons button:hover {
-  background-color: #b52c3e;
+  background-color: #e60000;
 }
 
-/* Menu container */
+/* Menu Container */
 .menu-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto 50px auto;
-  padding: 0 15px;
 }
 
+/* Pizza cards */
 .pizza {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  background-color: white;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px;
+  overflow: hidden;
   transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .pizza img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .pizza h3 {
-  color: #d63447;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin: 15px 0 5px 0;
 }
 
 .pizza p {
-  margin-bottom: 10px;
+  margin: 5px 0;
+  font-size: 1rem;
 }
 
-.pizza .price {
-  font-weight: bold;
+.pizza strong {
   font-size: 1.2rem;
+  color: #ff4d4d;
 }
 
+/* Hover effect for cards */
 .pizza:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #d63447;
+  background-color: #ff4d4d;
   color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.9rem;
 }
 
-/* Body dhe navbar bazik */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff8f0;
-  color: #333;
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+}
+/* index */
+
+/* style.css për About Us */
+
+/* Reset bazë */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body */
+body {
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
 nav {
-  background-color: #d63447;
-  padding: 15px;
+  background-color: #ff4d4d;
+  padding: 15px 0;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  list-style: none;
+  gap: 25px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  background-color: white;
+  color: #ff4d4d;
+  border-radius: 5px;
 }
 
+/* About container */
+.about-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Intro section */
+.about-intro {
+  text-align: center;
+}
+
+.about-intro h1 {
+  font-size: 2.8rem;
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+.about-intro p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Our Story */
+.about-story h2 {
+  font-size: 2rem;
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+.about-story p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Team */
+.about-team h2 {
+  font-size: 2rem;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+.team-member {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.team-member h3 {
+  color: #ff4d4d;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: #555;
+}
+
+/* Hover effect for team members */
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Values */
+.about-values h2 {
+  font-size: 2rem;
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+.about-values ul {
+  list-style: disc inside;
+  color: #555;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #ff4d4d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 0 15px;
+  }
+
+  .about-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-story h2,
+  .about-team h2,
+  .about-values h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* about */
+/* Reset bazë */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background-color: #ff4d4d;
+  padding: 15px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #ff4d4d;
+  border-radius: 5px;
+}
+
+/* Main content */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+main p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff4d4d;
+}
+
+.contact-form button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e03d3d;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1 1 300px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  background-color: #ff4d4d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10px;
+  }
+}
+/* contact */
+
+/* Reset bazë */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background-color: #ff4d4d;
+  padding: 15px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #ff4d4d;
+  border-radius: 5px;
+}
+
+/* Header */
 header {
   text-align: center;
-  padding: 30px 15px;
-  background-color: #fff3e6;
-  margin-bottom: 30px;
+  padding: 40px 20px;
+  background: #ffe6e6;
+  margin-bottom: 40px;
 }
 
 header h1 {
-  color: #d63447;
+  color: #ff4d4d;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 /* Menu container */
@@ -174,22 +560,27 @@ header p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto 50px auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 /* Pizza card */
 .pizza-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 280px;
   padding: 20px;
+  text-align: center;
   transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.pizza-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .pizza-card img {
@@ -199,30 +590,43 @@ header p {
 }
 
 .pizza-card h2 {
-  color: #d63447;
+  color: #ff4d4d;
   margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 .pizza-card p {
+  color: #555;
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 .pizza-card .price {
   font-weight: bold;
+  color: #ff4d4d;
   font-size: 1.2rem;
-}
-
-/* Hover efekt për kartelat */
-.pizza-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #d63447;
+  background-color: #ff4d4d;
   color: white;
-  border-radius: 5px 5px 0 0;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
 }
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .menu-container {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* mmenu */
