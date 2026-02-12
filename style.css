@@ -733,3 +733,23 @@ button:hover {
     font-size: 2rem;
   }
 }
+
+#feedback-btn {
+  position: fixed; /* rri fikse gjatë scroll */
+  bottom: 20px; /* 20px nga fundi i faqes */
+  right: 20px; /* 20px nga krahu i djathtë */
+  background-color: #007bff; /* ngjyrë blu, mund ta ndryshosh */
+  color: white;
+  border: none;
+  padding: 8px 12px; /* më e vogël se butoni normal */
+  border-radius: 50px; /* bëhet buton i rrumbullakët */
+  cursor: pointer;
+  font-size: 14px; /* më i vogël */
+  z-index: 1000; /* mbi çdo element */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+#feedback-btn:hover {
+  transform: scale(1.1); /* efekti kur e hover-on */
+}
