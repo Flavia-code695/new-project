@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <title>Pizza Palace</title>
   </head>
   <body>
@@ -67,19 +68,5 @@
     <footer>
       <p>&copy; 2026 Pizza Palace. All rights reserved.</p>
     </footer>
-
-    <!-- JS për filter -->
-    <script>
-      function filterPizza(type) {
-        const pizzas = document.querySelectorAll(".menu-container .pizza");
-        pizzas.forEach((pizza) => {
-          if (type === "all" || pizza.dataset.type === type) {
-            pizza.style.display = "block";
-          } else {
-            pizza.style.display = "none";
-          }
-        });
-      }
-    </script>
   </body>
 </html>

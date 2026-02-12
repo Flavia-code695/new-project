@@ -1,16 +1,18 @@
-// script.js
+function filterPizza(type) {
+  const pizzas = document.querySelectorAll(".menu-container .pizza");
+  pizzas.forEach((pizza) => {
+    if (type === "all" || pizza.dataset.type === type) {
+      pizza.style.display = "block";
+    } else {
+      pizza.style.display = "none";
+    }
+  });
+}
 
-// Kur faqja ngarkohet
-window.addEventListener("DOMContentLoaded", (event) => {
-  alert("Mirësevini në Pizza Palace!");
-});
-//alert tek orders
 const form = document.getElementById("orderForm");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // ndalon rifreskimin e faqes
-
+  event.preventDefault();
   alert("Porosia u mor me sukses! 🍕");
-
-  form.reset(); // pastron fushat e formës
+  form.reset();
 });
