@@ -630,3 +630,106 @@ footer {
   }
 }
 /* mmenu */
+
+/* order */
+/* ===== Orders Page ===== */
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+main p {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Order Container */
+.order-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Order Form Card */
+.order-form {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.4);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+button:hover {
+  background-color: #e03d3d;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .order-form {
+    padding: 25px;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+}

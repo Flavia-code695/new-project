@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place Your Order - Pizza Palace</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+      <h1>Place Your Order</h1>
+      <p>Fill in the details below to place your pizza order!</p>
+
+      <div class="order-container">
+        <!-- Order Form -->
+        <section class="order-form">
+          <form action="orderForm" method="post">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="123-456-7890"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="pizza">Choose Pizza:</label>
+              <select id="pizza" name="pizza" required>
+                <option value="">Select a pizza</option>
+                <option value="margherita">Margherita - $8</option>
+                <option value="pepperoni">Pepperoni - $10</option>
+                <option value="veggie">Veggie - $9</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Quantity:</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Additional Notes:</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Any special requests?"
+              ></textarea>
+            </div>
+
+            <button type="submit">Place Order</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Pizza Palace. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
