@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <a link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
     <title>Pizza Palace</title>
-   
   </head>
   <body>
     <!-- Navbar -->
@@ -27,34 +25,60 @@
 
     <!-- Main content -->
     <main>
-      <h2>Our Menu</h2>
-      <div class="menu">
-        <div class="pizza">
-          <img src="margherita.jpg" alt="Margherita Pizza" />
-          <h3>Margherita</h3>
-          <p>Classic pizza with tomato, mozzarella & basil</p>
-          <p><strong>$8</strong></p>
+      <section class="menu-section">
+        <h2>Our Menu</h2>
+
+        <!-- Filter buttons -->
+        <div class="filter-buttons">
+          <button onclick="filterPizza('all')">All</button>
+          <button onclick="filterPizza('veggie')">Veggie</button>
+          <button onclick="filterPizza('meat')">Meat</button>
+          <button onclick="filterPizza('classic')">Classic</button>
         </div>
-        <div class="pizza">
-          <img src="pepperoni.jpg" alt="Pepperoni Pizza" />
-          <h3>Pepperoni</h3>
-          <p>Tomato, mozzarella & pepperoni slices</p>
-          <p><strong>$10</strong></p>
+
+        <!-- Menu container -->
+        <div class="menu-container">
+          <div class="pizza" data-type="classic">
+            <img src="margherita.jpg" alt="Margherita Pizza" />
+            <h3>Margherita</h3>
+            <p>Classic pizza with tomato, mozzarella & basil</p>
+            <p><strong>$8</strong></p>
+          </div>
+
+          <div class="pizza" data-type="meat">
+            <img src="pepperoni.jpg" alt="Pepperoni Pizza" />
+            <h3>Pepperoni</h3>
+            <p>Tomato, mozzarella & pepperoni slices</p>
+            <p><strong>$10</strong></p>
+          </div>
+
+          <div class="pizza" data-type="veggie">
+            <img src="veggie.jpg" alt="Veggie Pizza" />
+            <h3>Veggie</h3>
+            <p>Tomato, mozzarella, peppers & olives</p>
+            <p><strong>$9</strong></p>
+          </div>
         </div>
-        <div class="pizza">
-          <img src="veggie.jpg" alt="Veggie Pizza" />
-          <h3>Veggie</h3>
-          <p>Tomato, mozzarella, peppers & olives</p>
-          <p><strong>$9</strong></p>
-        </div>
-      </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2026 Pizza Palace. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 
+    <!-- JS për filter -->
+    <script>
+      function filterPizza(type) {
+        const pizzas = document.querySelectorAll(".menu-container .pizza");
+        pizzas.forEach((pizza) => {
+          if (type === "all" || pizza.dataset.type === type) {
+            pizza.style.display = "block";
+          } else {
+            pizza.style.display = "none";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
