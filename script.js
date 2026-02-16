@@ -15,4 +15,11 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   alert("Porosia u mor me sukses! 🍕");
   form.reset();
+<<<<<<< HEAD
+=======
+});
+
+document.getElementById("feedback-btn").addEventListener("click", function () {
+  alert("Thanks for your feedback!"); // mund ta zëvendësosh me një modal form
+>>>>>>> feedback-button
 });
